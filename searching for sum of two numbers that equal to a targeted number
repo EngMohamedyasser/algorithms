@@ -1,0 +1,44 @@
+#include <stdio.h>
+#define max size 9
+/*
+                            THIS CODE IS WRITTEN IN C PROGRAMMING LANGUAGE
+
+    ************ This algorithm can be used upto 65,535 integers ******************************************************** 
+  you can adjust the code to be long / signed if you want to use either very large numbers (65,535+) or negative numbers .
+    ************************************ THE ARRAY HAS TO BE SORTED IN ASSENDING ORDER *****************************
+      Also you can add any kind of sort to the code to rearrange it before using this algorithm 
+
+      By using an array of 4000 random numbers , sorting them using Quick sort , the average execution time was 1.351 Ms
+
+      **************************The complexity of this algorithm is O(N)***********************************************
+
+
+*/
+
+void sumTwoNumbers(int *arr  , int target)
+{
+
+    unsigned short int leftPointer = 0 ,  rightPointer = max size - 1 ;
+    while(leftPointer<large)
+    {
+
+    if(arr[leftPointer]+arr[rightPointer]==target){
+        printf("%d , %d ", arr[leftPointer], arr[rightPointer]);
+        return;
+
+}
+
+        (arr[leftPointer]+arr[rightPointer]>target)?rightPointer--:leftPointer++;
+
+     }
+
+    }
+
+int main()
+{
+
+int arrr[9]={0,5,9,11,13,15,21,25,29};
+int *arr=arrr;
+
+sumTwoNumbers(arr,9,36);
+}
