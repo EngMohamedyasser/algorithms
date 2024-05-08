@@ -1,0 +1,54 @@
+/*
+
+******************************* This is binary search algorithm ****************************************
+i have added the binary search using Normal loop (recommended if you have memory limitation ) and recursion .
+You have to keep your array sorted in assending order in order to use it  (if not you can add a sorting function to it )
+this method has been tried on array of 4000 random numbers , using the quick sort to rearrange them 
+the statstics is as following : 
+
+average Excution time : 1.698
+
+the time complexity : O( LOG N)
+
+*/
+
+
+
+#include <stdio.h>
+int binSearch(int val,int arr[] , int high , int low )
+{
+while (low<=high)
+    {
+    int mid = low + (high- low)/2;
+    if(val==arr[mid]) return mid;
+
+    else
+        (val> arr[mid])?low = (mid +1) : (high=mid-1);
+    }
+    return -1 ;
+
+}
+
+int recBinarySearch(int val,int arr[] , int high , int low)
+{
+    if (high >= low) {
+
+    int mid = low + (high- low)/2;
+
+    if  (val ==arr[mid]) return mid ;
+
+    else return (val>= arr[mid])? recBinarySearch(val,arr,high,low = mid +1) :recBinarySearch(val,arr,high-1,low);
+
+    }
+    return -1;
+}
+
+
+
+int main()
+{
+// you have to create your own array before you use it 
+printf("%d",binSearch( 2000 ,arrr ,  4000 , 0)); // targted number , array , high , low 
+printf("%d",recBinarySearch( 2000 ,arrr ,  4000 , 0)); // targted number , array , high , low 
+
+}
